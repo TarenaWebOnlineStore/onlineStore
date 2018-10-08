@@ -1,0 +1,238 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/jquery-1.11.3.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class = 'header-index'>
+        <!--登录注册下载咨询等-->
+        <div class = 'header-index-state'>
+            <div class = 'header-index-state-all' >
+                <p class = 'fl'>
+                    <span id = 'lg_rg_js'>
+                        <a href="/login" title="登录" class="cl-6">登录</a>
+                        <span class="pd-0005 cl-c">|</span>
+                        <a href="/register" title="立即注册" class="cl-6 mr30">立即注册</a>
+                    </span>
+                    <a href="/dowload" title="下载APP" class="hover cl-6" target="_blank">
+                        <span>图</span>
+                        下载APP</a>
+                </p>
+                <p class="fr">
+                    <a title="联系客服" target="_blank" onclick="" href="" class="hover cl-6 fr">联系客服</a>
+                    <span class="pd-0015 cl-c fr">|</span>
+                    <a title="店铺管理" target="_blank" onclick="" href="" class="hover cl-6 fr">店铺管理</a>
+                    <span class="pd-0015 cl-c fr">|</span>
+                    <a title="收藏夹" target="_blank" onclick="" href="" class="hover cl-6 fr">收藏夹</a>
+                    <span class="pd-0015 cl-c fr">|</span>
+                </p>
+                <div class="fr">
+                    <label class="cp">
+                        我的博库
+                    </label>
+                    <div class="acount">
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">我的博库</a>
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">我的订单</a>
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">我的优惠券</a>
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">我的收藏</a>
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">我的收入</a>
+                        <a title="" href="" class="hover to-hd cl-c" target="_blank">官方消息</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--logo+搜索+购物车+导航-->
+        <div class = 'wd-1200 ma'>
+            <!--logo+搜索+购物车-->
+            <div class = 'search-container'>
+                <div class="logo-container">
+                    <a class = 'db logo-box fl' href="/index">
+                        <img width="220" class ='db' src="{% static 'images/logo.png' %}" draggable="false" alt="">
+                    </a>
+                    <!-- 搜索 -->
+                    <div class="fl">
+                        <div class = 'search-box'>
+                            <div class="fl wd-480 pr zi-1 associate-container">
+                                <input class="bd-n searchkey" id = 'gudingsearch' type = 'text' value="" placeholder="lalalal">
+                            </div>
+                            <p class="fr icon-search-line cl-f fs-27 tosearch">搜索</p>
+                        </div>
+                        <p class = 'fs-12 lh-25 tip'></p>
+                        <div class = 'cb'></div>
+                        <p class="fs-12 lh-25  tip">
+                            <a title="半小时漫画中国史" class="cl-rd-l" href="" target="_blank">半小时漫画中国史</a>
+                            <span class="cl-9 pd-0005">|</span>
+                            <a title="红星照耀中国" class="cl-9" href="" target="_blank">红星照耀中国</a>
+                            <span class="cl-9 pd-0005">|</span>
+                            <a title="百年孤独" class="cl-9" href="" target="_blank">百年孤独</a>
+                            <span class="cl-9 pd-0005">|</span>
+                            <a title="三体" class="cl-9" href="" target="_blank">三体</a>
+                            <span class="cl-9 pd-0005">|</span>
+                            <a title="现代英汉字典" class="cl-9" href="" target="_blank">现代英汉字典</a>
+                        </p>
+                    </div>
+                    <div class="fr ta-rt mt-8 cart">
+                        <a class="fs-16 bd-1-d br-4 pd-0610 cart-box" href="" target="_blank">
+                            <span class="mt-15 pr" style="top: 8px;">
+                                <img class ='mr-10 pr' src="{% static '/images/cart.png' %}" draggable="false" alt="购物车">
+                            </span>
+                            <span class="mr-5">购物车</span>
+                            <label class="cl-f fw-nm br-10 cart_num"></label>
+                        </a>
+                    </div>
+                    <div class = 'cb'></div>
+                </div>
+            </div>
+            <!--导航-->
+            <div class= "nav-box">
+                <div class="type fl public">
+                    <a target="_blank" class="db cl-f title" href="">
+                        <img class="" src="" alt="左侧图案|" >所有商品分类
+                    </a>
+                </div>
+                <div class="nav fl">
+                    <!--固定导航菜单-->
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>首页</span>
+                        </a>
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>新品</span>
+                        </a>
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>限时购</span>
+                        </a>
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>排行榜</span>
+                        </a>
+                    <!--自定义导航菜单-->
+                        <span class="db pd-0015 fl">|</span>
+                    <!--自定义导航菜单-->
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>图书馆</span>
+                        </a>
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>文创馆</span>
+                        </a>
+                        <a target="_blank" class="db pd-0015 fl on-mouse" href="">
+                            <span>音乐影音馆</span>
+                        </a>
+                </div>
+                <div class = 'cb'></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--尾部-->
+    <div class="footer">
+        <!-- tag -->
+        <div class="tag">
+            <ul class="clearfix">
+                <li class="cl-4 lh-25 pd-0500 wd-25p fl">
+                    <img src="{% static 'images/zheng.png' %}" alt="" width="50" height="50" class="fl mr-10">
+                    <div class="fl">
+                        <p class="fs-24 ">全场正品</p>
+                        <p>出版社直采</p>
+                    </div>
+                    <div class="cb"></div>
+                </li>
+                <li class="cl-4 lh-25 pd-0500 wd-25p fl">
+                    <img src="{% static 'images/sheng.png' %}" alt="" width="50" height="50" class="fl mr-10">
+                    <div class="fl">
+                        <p class="fs-24 ">全场满５９包邮</p>
+                        <p>惊喜不断·让利多多</p>
+                    </div>
+                    <div class="cb"></div>
+                </li>
+                <li class="cl-4 lh-25 pd-0500 wd-25p fl">
+                    <img src="{% static 'images/huo.png' %}" alt="" width="50" height="50" class="fl mr-10">
+                    <div class="fl">
+                        <p class="fs-24 ">门店自取</p>
+                        <p>就近灵活·方便快捷</p>
+                    </div>
+                    <div class="cb"></div>
+                </li>
+                <li class="cl-4 lh-25 pd-0500 wd-25p fl">
+                    <img src="{% static 'images/hao.png' %}" alt="" width="50" height="50" class="fl mr-10">
+                    <div class="fl">
+                        <p class="fs-24 ">售后无忧</p>
+                        <p>服务体验·更加精彩</p>
+                    </div>
+                    <div class="cb"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="wd-1200 ma pd-2000 clearfix">
+            <!--尾部左边-->
+            <ul class="links-box fl clearfix">
+                <li class="lh-30 wd-20p fl">
+                    <span class="db fs-16 lh-40 ">新手指南</span>
+                    <div><a target="_blank" class="hover cl-6" href="">新用户注册</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">购物流程</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">积分制度</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">注册开店</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">激励制度</a></div>
+                </li>
+                <li class="lh-30 wd-20p fl">
+                    <span class="db fs-16 lh-40 ">支付与配送</span>
+                    <div><a target="_blank" class="hover cl-6" href="">IC卡充值说明</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">验货与签收</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">配送范围</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">自行取货</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">支付方式</a></div>
+                </li>
+                <li class="lh-30 wd-20p fl">
+                    <span class="db fs-16 lh-40 ">售后服务</span>
+                    <div><a target="_blank" class="hover cl-6" href="">发票制度</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">退换货流程</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">退换货地址</a></div>
+                </li>
+                <li class="lh-30 wd-20p fl">
+                    <span class="db fs-16 lh-40 ">个人中心</span>
+                    <div><a target="_blank" class="hover cl-6" href="">店铺设置</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">团队管理</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">收入管理</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">我的订单</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">我的优惠券</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">我的等级</a></div>
+                </li>
+                <li class="lh-30 wd-20p fl">
+                    <span class="db fs-16 lh-40 ">了解博库</span>
+                    <div><a target="_blank" class="hover cl-6" href="">关于博库</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">联系我们</a></div>
+                    <div><a target="_blank" class="hover cl-6" href="">公司招聘</a></div>
+                </li>
+            </ul>
+            <!--尾部右边-->
+            <div class="code-box fr">
+                <ul class="clearfix">
+                    <li class="cl-6 lh-30 ta-ct wd-50p fl">
+                        <p class="fs-16 lh-40 ">手机博库</p>
+                        <!--懒加载的模式-->
+                        <img data-src="" align="" width="105" height="105" class="db bd-1-d ma visible" src="">
+                        <p class="lh-30">下载手机客户端</p>
+                    </li>
+                    <li class="cl-6 lh-30 ta-ct wd-50p fl">
+                        <p class="fs-16 lh-40 ">关注微信</p>
+                        <!--懒加载的模式-->
+                        <img data-src="" align="" width="105" height="105" class="db bd-1-d ma visible" src="">
+                        <p class="lh-30">关注官方微信</p>
+                    </li>
+                </ul>
+
+                <div class="cl-6 lh-25 mt-15" style="clear:both;padding-top: 15px;">
+                    <p class="fs-16 fw-bd" style="display: block;clear:both;">服务热线&nbsp;0571-88888888</p>
+                    <p>服务时间&nbsp;9：00-21：00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
